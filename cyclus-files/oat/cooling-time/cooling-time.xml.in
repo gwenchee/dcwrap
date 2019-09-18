@@ -5,7 +5,6 @@
     <startmonth>1</startmonth>
     <startyear>2000</startyear>
     <decay>lazy</decay>
-    <simhandle>{{handle}}</simhandle>
 </control>
 <archetypes>
         <spec>
@@ -604,6 +603,17 @@
     </config>
 </facility>
 <facility>
+    <name>enrichmentsink</name>
+    <config>
+        <Sink>
+            <in_commods>
+                <val>enrichmentwaste</val>
+            </in_commods>
+            <max_inv_size>1e20</max_inv_size>
+        </Sink>
+    </config>
+</facility>
+<facility>
     <name>lwrsink</name>
     <config>
         <Sink>
@@ -869,6 +879,10 @@
             <commod>moxstorageout</commod>
         </item>
         <item>
+            <facility>enrichmentsink</facility>
+            <commod>enrichmentwaste</commod>
+        </item>
+        <item>
             <facility>lwrsink</facility>
             <commod>lwrreprocessingwaste</commod>
         </item>
@@ -905,6 +919,10 @@
         <item>
             <facility>moxreprocessing</facility>
             <capacity>1e8</capacity>
+        </item>
+        <item>
+            <facility>enrichmentsink</facility>
+            <capacity>1e20</capacity>
         </item>
         <item>
             <facility>lwrsink</facility>
