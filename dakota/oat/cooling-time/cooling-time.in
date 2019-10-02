@@ -7,12 +7,12 @@ environment,
 
 method,						
 	multidim_parameter_study
-    partitions = 6
+    partitions = 1
 
 variables,					
 	continuous_design = 1			
-    lower_bounds      1     
-    upper_bounds      7      
+    lower_bounds      2     
+    upper_bounds      3      
     descriptors       'ct'     
 
 interface,							
